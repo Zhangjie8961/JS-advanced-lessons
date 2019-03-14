@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="" href="" />
+    <style>
+        
+        legend{
+            color:red;
+            font-weight: bold;
+        }
+        #star{
+            color:red;
+        }
+        fieldset{
+            width:350px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1>毕业生信息</h1>
+    <form>
+        <fieldset>
+            <legend>
+                学生信息
+            </legend>
+            <p>姓名<input type="text" name="xm" required placeholder="请输入姓名" ><span style="color:red;">*</span></p>
+            <p>学号<input type="text" name="xh" required placeholder="请输入学号" ><span style="color:red;">*</span></p>
+            <p>手机<input type="number" name="sj" required placeholder="请输入手机" ><span style="color:red;">*</span></p>
+            <p>邮箱<input type="url" name="yx" required placeholder="请输入邮箱地址" ><span style="color:red;">*</span></p>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>
+                录取情况
+            </legend>
+            <p>录取学校<input type="text" name="xx"  ></p>
+            <p>入学成绩<input type="number" name="cj"  ></p>
+            <p>入学时间<input type="date" name="rxsj"  ></p>
+        </fieldset>
+        <br/>
+        <input type="submit" id="submit"/>
+    </form>
+</body>
+
+</html>
