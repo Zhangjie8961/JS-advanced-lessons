@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>web存储</title>
+    <meta charset="utf-8" />
+    <style>
+     *{
+        margin:0;
+        padding:0;
+    }
+    #new{
+        float: left;
+        border:1px solid gray;
+        background-color: gray;
+        margin:10px;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <input style="height:35px;width:200px;margin-top: 20px;" id="memo" cols="60" rows="10">
+    <input style="height:35px;width:100px;margin-top: 0px;" type="button" value="搜索" onclick="saveStorage('memo');" />
+    </br>
+    最近搜索
+    </br>
+    </br>
+    
+    <p id="msg"></p>
+    <input type="button" value="×" onclick="clearStorage('msg');" />
+</body>
+<script type="text/javascript">
+    function saveStorage(id) {
+        var data = document.getElementById(id).value;
+        var time = new Date().getTime();
+        localStorage.setItem(time, data);
+        loadStorage('msg');
+    }
+
+    function loadStorage(id) {
+        var result = '<div>';
+        for (var i = 0; i < localStorage.length; i++) {
+            var key = localStorage.key(i);
+            var value = localStorage.getItem(key);
+            result += '<p id="new">' + value + '</p>' ;
+        }
+        result += '</div>';
+        var target = document.getElementById(id);
+        target.innerHTML = result;
+    }
+
+    function clearStorage() {
+        localStorage.clear();
+        alert("全部数据被清除。");
+        loadStorage('msg');
+    }
+</script>
+
+</html>
