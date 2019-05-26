@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css动画变形</title>
+    <style type="text/css">
+    *{
+        padding:0;margin:0;
+    }
+    .box{
+        height:430px;
+        width:380px;
+        border:solid  4px  rgb(170, 170, 170);
+        margin-left:400px;
+    }
+    img{
+        height:260px;
+        width:380px;
+        background-size:cover;
+
+    }
+    .riqi{
+        
+        height:47px;
+        width:50px;
+        background: rgb(255, 136, 0);
+        color:white;
+        margin:25px;
+        margin-left:300px;
+        text-align: center;
+        padding-top:3px;
+        border-top-left-radius:50px;
+        border-top-right-radius:50px;
+        border-bottom-left-radius:50px;
+        border-bottom-right-radius:50px;
+        position:fixed;
+    }
+    .zhaopian{
+        height: 21px;
+        width: 56px;
+        padding-top:5px;
+        font-size: 12px;
+        text-align:center;
+        color:white;
+        background: rgb(255, 136, 0);
+        float:left;
+        /* z-index:2; */
+        margin-top:-30px;
+        position:fixed;
+        /* position: absolute;  */
+        /* transition: all .3s linear .1s;  */
+    }
+
+    .artical{
+        width:336px;
+        padding:22px;
+        background: white;
+    }
+    .artical h1{
+        font-size:22px;
+    }
+    .artical p{
+        margin-top:10px;
+        font-size:20px;
+        color:orange
+    }
+    .jianjie{
+        font-size:17px;
+        color:rgba(133, 133, 130, 0.911);
+        font-family:SimHei;
+        line-height:25px;
+        display:none;
+    }
+    .wei{
+        font-size:12px;
+        color:rgba(133, 133, 130, 0.911);
+        font-family:SimHei;
+        line-height:25px;
+        margin-top:30px;
+    }
+    .artical:hover{
+        transform:translateY(-130px);
+    }
+    .artical:hover .jianjie{
+        display:block;
+    }
+    .zhaopian：hover{
+        transform:translateY(-130px);
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <div class="riqi" id='riqi'>15<br>五月</div>
+        <img src="zhanqiao.jpg">
+        <div class="zhaopian" id="zhaopian">照片</div>
+        <div class = "artical" id="artical"> 
+            <h1>青岛栈桥</h1>
+            <p>国家AAAA级旅游景区</p>
+            <div class="jianjie" id="jianjie">青岛栈桥是青岛海滨风景区的景点之一，是国务院于1982年首批公布的国家级风景名胜区。青岛栈桥位于游人如织的青岛中山路南端，桥身从海岸探入如弯月般的青岛湾深处。桥身供游人参观并在此停靠旅游船，由此乘船可看海上青岛。</div>
+            <div class="wei">10分钟前&nbsp&nbsp&nbsp123评论</div>
+        </div>
+        
+    </div>
+    
+</body>
+<!-- 
+<script>
+        var artical = document.getElementById("artical");
+        var img = document.getElementById("img");
+        var lititle = document.getElementById("zhaopian");
+        var detail = document.getElementById("jianjie");
+        var arr = document.getElementById("img").childNodes;
+        console.log(arr);
+    
+        artical.onmouseover = function(){
+            //图片
+            arr[1].classList.add("active");
+            fog.style.display = "block";
+            //小框
+            lititle.style.top = "122px";        
+            detail.style.transform = "scale(1,1)";
+        }
+        artical.onmouseout = function(){
+            arr[1].classList.remove("active");
+            fog.style.display = "none";
+    
+            lititle.style.top = "202px";
+            detail.style.transform = "scale(0,0)";   
+        }
+    </script> -->
+</html>
