@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var objA = {"objName":"AAA"}
+	var objB = {"objName":"BBB"}
+	objA.foo = function(){
+		console.log(this.objName);
+	}
+	objA.foo();
+
+	// objA.foo.call(objB);
+	// //方法名.call切换方法调用对象。
+	// //apply（）同上
+
+	// //构造函数调用
+	// function Person(username){
+	// 	this.username = username;
+	// }
+	// Person.prototype.sayHi  = function(){
+	// 	console.log(this,username);
+	// }
+
+	// var person = new Person("zhangsan");
+	// console.log(person._proto_=== Person.prototype);
+	// //对象共用类名.prototype上的属性或函数。
+
+	function test(){
+		var s ="";
+		//argument获取函数传入的实参，是个类数组对象（类似于集合）
+
+		for (var i = 0; i <arguments.length;i++){
+			s += arguments[i];
+
+		}
+		return s;
+
+	}	
+	test("hello","worle","!")
+
+</script>
+</body>
+</html>
