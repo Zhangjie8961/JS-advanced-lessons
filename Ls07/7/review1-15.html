@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+	/*
+	1、防止变量污染
+	(function(){
+	
+	})();
+	2、防止变量的非期望共享
+	for(var i=0;i<3;i++){
+		1、给元素绑定事件、回调函数
+		2、延迟执行、定时执行
+		解决方法：
+		(function(j){
+	
+		})(i)
+	}
+
+	闭包，JavaScript存在的代码运行机制
+
+	外层函数fn1、内层函数fn2
+	function fn1(){
+		var x=0;
+		function fn2(){
+			return x++;
+		}
+		return fn2;
+	}
+	var result=fn1();//得到的是fn2函数
+	result();
+	result();//x不会被释放，在闭包里
+	*/
+</script>
+</html>
